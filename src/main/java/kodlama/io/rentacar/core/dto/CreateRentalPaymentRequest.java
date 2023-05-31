@@ -1,5 +1,6 @@
 package kodlama.io.rentacar.core.dto;
 
+import kodlama.io.rentacar.business.dto.requests.PaymentRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,5 @@ public class CreateRentalPaymentRequest {
     private int cardExpirationMonth;
     private String cardCvv;
     private double price;
+
 }

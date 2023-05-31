@@ -13,12 +13,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CreatePaymentRequest extends PaymentRequest {
 
-    private int id;
-    private String cardNumber;
-    private String cardHolder;
-    private int cardExpirationYear;
-    private int cardExpirationMonth;
-    private String cardCvv;
     @Min(value = 1)
     private double balance;
 }
