@@ -27,7 +27,10 @@ public class CarManager implements CarService {
     @Override
     public List<GetAllCarsResponse> getAll(boolean includeMaintenance) {
         List<Car> cars = filterCarsByMaintenanceState(includeMaintenance);
-        List<GetAllCarsResponse> response = cars.stream().map(car -> mapper.map(car, GetAllCarsResponse.class)).toList();
+        List<GetAllCarsResponse> response = cars
+                .stream()
+                .map(car -> mapper.map(car, GetAllCarsResponse.class))
+                .toList();
 
         return response;
     }
